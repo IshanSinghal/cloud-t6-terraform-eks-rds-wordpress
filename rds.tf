@@ -1,8 +1,4 @@
-
-
-//Creating The Security Grp For RDS
-
-//Creating The Security Group And Allowing The HTTP and SSH
+//SECURITY GROUP
 resource "aws_security_group" "secgrp-rds" {
 
   name        = "secgrp-rds"
@@ -27,7 +23,7 @@ resource "aws_security_group" "secgrp-rds" {
   }
 }
 
-
+//RDS INSTANCE
 resource "aws_db_instance" "rds" {
   engine               = "mysql"
   engine_version       = "5.7"
